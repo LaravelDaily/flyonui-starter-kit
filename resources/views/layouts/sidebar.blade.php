@@ -34,28 +34,23 @@
                         class="text-base-content/50 before:bg-base-content/20 mt-2 p-2 text-xs uppercase before:absolute before:-start-3 before:top-1/2 before:h-0.5 before:w-2.5">
                         Pages</li>
 
-                    <!-- Account Settings Menu -->
-                    <li class="accordion-item" id="account-settings">
+                    <!-- User Management Menu -->
+                    <li @class(['accordion-item', 'active' => request()->routeIs('users.*')]) id="user-management">
                         <button
                             class="accordion-toggle accordion-item-active:bg-neutral/10 inline-flex w-full items-center p-2 text-start text-sm font-normal"
-                            aria-controls="account-settings-collapse-account-settings" aria-expanded="true">
-                            <span class="icon-[tabler--settings] size-4.5"></span>
-                            <span class="grow">Account Setting</span>
+                            aria-controls="user-management-collapse-user-management" aria-expanded="true">
+                            <span class="icon-[tabler--users] size-4.5"></span>
+                            <span class="grow">User Management</span>
                             <span
                                 class="icon-[tabler--chevron-right] accordion-item-active:rotate-90 size-4.5 shrink-0 transition-transform duration-300 rtl:rotate-180"></span>
                         </button>
-                        <div id="account-settings-collapse-account-settings"
+                        <div id="user-management-collapse-user-management"
                             class="accordion-content mt-1 hidden w-full overflow-hidden transition-[height] duration-300"
-                            aria-labelledby="account-settings" role="region">
+                            aria-labelledby="account-settings" role="region" @if(request()->routeIs('users.*')) style="display: block;" @endif>
                             <ul class="space-y-1">
                                 <li>
-                                    <a href="#" class="inline-flex w-full items-center px-2">
-                                        <span>Account</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" class="inline-flex w-full items-center px-2">
-                                        <span>Notifications</span>
+                                    <a href="{{ route('users.index') }}" @class(['inline-flex w-full items-center px-2', 'menu-active' => request()->routeIs('users.index')])>
+                                        <span>Users</span>
                                     </a>
                                 </li>
                             </ul>
