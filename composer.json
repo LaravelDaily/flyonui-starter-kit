@@ -1,8 +1,8 @@
 {
     "$schema": "https://getcomposer.org/schema.json",
-    "name": "laraveldaily/tailadmin-starter-kit",
+    "name": "laraveldaily/flyonui-starter-kit",
     "type": "project",
-    "description": "LaravelDaily Starter Kit for the Laravel framework, with TailAdmin components.",
+    "description": "LaravelDaily Starter Kit for the Laravel framework, with FlyonUI components.",
     "keywords": [
         "laravel",
         "framework"
