@@ -102,11 +102,13 @@
                         </div>
                         <button class="btn btn-lg btn-primary btn-gradient btn-block" type="submit">Sign in</button>
                     </form>
+                    @if (Route::has('register'))
                     <p class="text-base-content/80 mb-4 text-center">
                         New on our platform?
                         <a href="{{ route('register') }}" class="link link-animated link-primary font-normal">Create an
                             account</a>
                     </p>
+                    @endif
                 </div>
             </div>
         </div>
